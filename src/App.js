@@ -2,6 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import HelloWorld from './components/helloWorld/helloWorld';
 import Calculator from './components/calculator/calculator';
+import New from './components/state/state';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         </p>
         <HelloWorld name="Irishka"/>
         <HelloWorld name="Pashka"/>
+        <New/>
         <Calculator x="13" y="4"/>
         <a
           className="App-link"
