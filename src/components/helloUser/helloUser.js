@@ -1,6 +1,6 @@
 
 
-function HelloWorld(props) {
+function HelloUser(props) {
     return (
       <div>
             <h1>Hello {props.name}</h1>
@@ -8,4 +8,4 @@ function HelloWorld(props) {
     );
   }
   
-  export default HelloWorld;
+  export default HelloUser;

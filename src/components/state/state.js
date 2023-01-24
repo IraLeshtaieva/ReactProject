@@ -2,37 +2,49 @@ import { Component } from 'react';
 import './button.css';
 
 
-class Date extends Component {
+class Jokes extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            year: 1990
+            like: 0
         }
     }
 
-    nextYear = () => {
+    moreLikes = () => {
         this.setState({
-            year: this.state.year + 1
+            like: this.state.like + 1
+        })
+    }
+
+    lessLikes = () => {
+        this.setState({
+            like: this.state.like - 1
         })
     }
 
     render() {
-        const {date, day} = this.props;
+        const {joke, date} = this.props;
         return (
         <div>
-            <button onClick={this.nextYear} className="button" >Future</button>
-            <p>Today is - {date}, day - {day}, year - {this.state.year}</p>
+            <p>Joke: {joke}</p> 
+            <p>Like: {this.state.like}</p>
+            <button onClick={this.moreLikes} className="button" >Like</button>
+            <p>Today is: {date}</p>
+            <button onClick={this.lessLikes} className="button" >Dislike</button>
         </div>
       )  
     } 
 }
 
-function New() {
+function TellingJoke() {
     return(
         <div>
-           <Date date="13.12" day="Четверг" /> 
+           <Jokes joke="Когда-то я пыталaсь познать мир. Потом его изменить. 
+           Потом изменить свое отношение к миру. А сейчас я уверенa, что если помыть в доме окна, 
+           пользы будет больше..."
+           date="24/01/2023" /> 
         </div>
     )
 }
 
-export default New;
+export default TellingJoke;

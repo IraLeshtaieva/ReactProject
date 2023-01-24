@@ -1,8 +1,8 @@
 import logo from './logo.svg';
 import './App.css';
-import HelloWorld from './components/helloWorld/helloWorld';
+import HelloUser from './components/helloUser/helloUser';
 import Calculator from './components/calculator/calculator';
-import New from './components/state/state';
+import TellingJoke from './components/state/state';
 
 function App() {
   return (
@@ -10,19 +10,18 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+        В дом, где смеются, приходит счастье (Японская пословица)
         </p>
-        <HelloWorld name="Irishka"/>
-        <HelloWorld name="Pashka"/>
-        <New/>
-        <Calculator x="13" y="4"/>
+        <HelloUser name="Irishka"/>
+        <TellingJoke/>
+        <Calculator x="1"/>
         <a
           className="App-link"
-          href="https://reactjs.org"
+          href="https://www.instagram.com/smuzi_u_luzi/"
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React
+          Follow me!
         </a>
       </header>
     </div>
