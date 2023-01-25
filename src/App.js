@@ -1,15 +1,17 @@
 import logo from './logo.svg';
 import './App.css';
+import './components/state/text.css';
 import HelloUser from './components/helloUser/helloUser';
 import Calculator from './components/calculator/calculator';
 import TellingJoke from './components/state/state';
+
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <p>
+        <p className="text">
         В дом, где смеются, приходит счастье (Японская пословица)
         </p>
         <HelloUser name="Irishka"/>

@@ -1,5 +1,6 @@
 import { Component } from 'react'; 
 import './button.css';
+import './text.css';
 
 
 class Jokes extends Component {
@@ -26,11 +27,15 @@ class Jokes extends Component {
         const {joke, date} = this.props;
         return (
         <div>
-            <p>Joke: {joke}</p> 
-            <p>Like: {this.state.like}</p>
-            <button onClick={this.moreLikes} className="button" >Like</button>
+            <p>Joke of the day: </p> 
+            <p className="text">{joke}</p> 
+            <p>Like: {this.state.like}
+            <button onClick={this.moreLikes} className="button button-image-like">
+            <img src = "like1.svg" alt="Like"/>    
+            </button> 
+            <button onClick={this.lessLikes} className="button button-image-dislike" >Dislike</button> </p>
             <p>Today is: {date}</p>
-            <button onClick={this.lessLikes} className="button" >Dislike</button>
+
         </div>
       )  
     } 

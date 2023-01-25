@@ -1,11 +1,26 @@
 .button {
     background-color:#F08080; 
     border: none;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
+    color: rgb(45, 52, 83);
+    padding: 4px 15px;
+    text-align:center;
+    text-decoration: underline;
     display: inline-block;
     font-size: 16px;
-    border-radius: 12px;
+    border-radius: 5px;
+    width:7%;
+}
+
+.button-image-like {
+    background-image:url('./like1.svg');
+    border-width: 7px;
+    border-style: ridge;
+    border-color: #976de6;
+}
+
+.button-image-dislike {
+    background-image:url('./dislike1.svg');
+    border-width: 7px;
+    border-style: ridge;
+    border-color: #976de6;
 }

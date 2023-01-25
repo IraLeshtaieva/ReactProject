@@ -1,5 +1,7 @@
 import { Component } from 'react'; 
 import './element.css';
+import './flower.css';
+import flower from './flower.svg';
 
 class Visitors extends Component {
     constructor(props) {
@@ -14,10 +16,15 @@ class Visitors extends Component {
         })
     }
 
+    buyFlower = () => {
+      prompt('Количество букетов?', 5);
+    }
+
     render() {
         return (
         <div>
-          <button onMouseEnter={this.moreVisitors} className="custom-btn">иуу</button>
+          <img onMouseEnter={this.moreVisitors} className="flower-style" src={flower} alt="flower" />
+          <button onClick={this.buyFlower} className="custom-btn btn-8">Подарить букет</button>
           <p> Сегодня наш сайт посетило {this.state.visitor}  счастливых людей </p>
         </div>
       )  
