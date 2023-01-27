@@ -1,26 +1,24 @@
+.likes {
+    width: 50px; /* Ширина области */
+    margin-left: 1%;
+    margin-right: 1%;
+}
+
 .button {
-    background-color:#F08080; 
+    background-color: #7277c0; 
     border: none;
-    color: rgb(45, 52, 83);
-    padding: 4px 15px;
-    text-align:center;
-    text-decoration: underline;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
     display: inline-block;
     font-size: 16px;
-    border-radius: 5px;
-    width:7%;
+    margin-left: 1%;
+    margin-right: 1%;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
 }
 
-.button-image-like {
-    background-image:url('./like1.svg');
-    border-width: 7px;
-    border-style: ridge;
-    border-color: #976de6;
-}
-
-.button-image-dislike {
-    background-image:url('./dislike1.svg');
-    border-width: 7px;
-    border-style: ridge;
-    border-color: #976de6;
+.button:hover {
+    background-color: #9e4caf; /* Green */
+    color: white;
 }

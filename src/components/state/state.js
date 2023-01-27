@@ -1,14 +1,29 @@
 import { Component } from 'react'; 
 import './button.css';
 import './text.css';
+import like from './like.svg';
+import dislike from './dislike.svg';
 
 
 class Jokes extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            like: 0
+            like: 0,
+            joke: 0
         }
+    }
+
+    newJoke = () => {
+        this.setState({
+          joke: this.state.joke + 1  
+    })
+    }
+
+    oldJoke = () => {
+        this.setState({
+          joke: this.state.joke - 1  
+    })
     }
 
     moreLikes = () => {
@@ -24,16 +39,29 @@ class Jokes extends Component {
     }
 
     render() {
-        const {joke, date} = this.props;
+        const {date} = this.props;
+        let somejoke = "";
+        if(this.state.joke === 0) {
+            somejoke = "Лучше быть в поиске, чем в розыске"
+        } else if (this.state.joke === 1) {
+            somejoke = "Когда вас упрекают в том, что вы слишком ленивы, напомните им, что кто-то вообще назвал породу собак 'дог'"
+        } else if (this.state.joke === 2) {
+            somejoke = "Верный признак, что в отношениях что-то разладилось - если в квартире помимо вас находятся медики, полиция и понятые..."
+        } else {
+            somejoke = "Больше анекдотов читайте на сайте: 'https://anekdotov.net'/"
+        }
         return (
         <div>
             <p>Joke of the day: </p> 
-            <p className="text">{joke}</p> 
-            <p>Like: {this.state.like}
-            <button onClick={this.moreLikes} className="button button-image-like">
-            <img src = "like1.svg" alt="Like"/>    
-            </button> 
-            <button onClick={this.lessLikes} className="button button-image-dislike" >Dislike</button> </p>
+            <p className="text">{somejoke}</p> 
+            <button onClick={this.newJoke} className="button" >Next JoKe</button>
+            <button onClick={this.oldJoke} className="button" >Previos JoKe</button>
+            <p>Like: {this.state.like} 
+            <div> 
+                <img src={like} alt="Like" className="likes" onClick={this.moreLikes}/>
+                <img src={dislike} alt="Dislike" className="likes" onClick={this.lessLikes}/>    
+            </div>
+             </p>
             <p>Today is: {date}</p>
 
         </div>
