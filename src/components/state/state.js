@@ -48,14 +48,20 @@ class Jokes extends Component {
         } else if (this.state.joke === 2) {
             somejoke = "Верный признак, что в отношениях что-то разладилось - если в квартире помимо вас находятся медики, полиция и понятые..."
         } else {
-            somejoke = "Больше анекдотов читайте на сайте: 'https://anekdotov.net'/"
+            somejoke = <a  className="App-link" 
+                           href='https://anekdotov.net'
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           >
+                           Больше анекдотов читайте на сайте: 'https://anekdotov.net'
+                           </a>;
         }
         return (
         <div>
             <p>Joke of the day: </p> 
             <p className="text">{somejoke}</p> 
-            <button onClick={this.newJoke} className="button" >Next JoKe</button>
             <button onClick={this.oldJoke} className="button" >Previos JoKe</button>
+            <button onClick={this.newJoke} className="button" >Next JoKe</button>
             <p>Like: {this.state.like} 
             <div> 
                 <img src={like} alt="Like" className="likes" onClick={this.moreLikes}/>
